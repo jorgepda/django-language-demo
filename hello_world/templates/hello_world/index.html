@@ -1,3 +1,20 @@
 {% load i18n %} 
 
 <h1>{% trans "Hello World from a template. Welcome to my site." %}</h1>
+
+<form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+    <input name="next" type="hidden" value="{{ redirect_to }}" />
+    <select name="language">
+        {% get_current_language as LANGUAGE_CODE %}
+	{% get_available_languages as LANGUAGES  %}
+	{% get_language_info_list for LANGUAGES as langs %}
+        {% for lang in langs %}
+            {% if lang.code != LANGUAGE_CODE %}
+                <option value="{{ lang.code }}">
+                    {{ lang.name_local }} 
+                </option>
+            {% endif %}
+        {% endfor %}
+    </select>
+    <input type="submit" value="Go" />
+</form>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 15:09-0400\n"
+"POT-Creation-Date: 2018-03-28 17:00-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,3 +21,15 @@ msgstr ""
 #: hello_world/templates/hello_world/index.html:3
 msgid "Hello World from a template. Welcome to my site."
 msgstr "Hola mundo desde un template. Bienvenido a mi sitio."
+
+#: mysite/settings.py:124
+msgid "Chinese"
+msgstr "Chino"
+
+#: mysite/settings.py:125
+msgid "English"
+msgstr "Español"
+
+#: mysite/settings.py:126
+msgid "Spanish"
+msgstr "Español"
