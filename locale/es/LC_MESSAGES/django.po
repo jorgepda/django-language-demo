@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 17:00-0400\n"
+"POT-Creation-Date: 2018-03-30 15:13-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +17,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: hello_world/forms.py:5
+msgid "First name"
+msgstr "Nombre de pila"
+
+#: hello_world/forms.py:6
+msgid "Last name"
+msgstr "Apellido"
+
+#: hello_world/forms.py:7
+msgid "Email address"
+msgstr "Correo electrónico"
+
+#: hello_world/forms.py:8
+msgid "School name"
+msgstr "Nombre de escuela"
+
+#: hello_world/forms.py:9
+msgid "School district"
+msgstr "Distrito de la escuela"
+
+#: hello_world/forms.py:10
+msgid "Public School"
+msgstr "Escuela pública"
+
+#: hello_world/forms.py:10
+msgid "Private or Charter School"
+msgstr "Escuela privada"
+
+#: hello_world/forms.py:10
+msgid "Other"
+msgstr "Otra"
+
+#: hello_world/forms.py:11
+msgid "School type"
+msgstr "Tipo de escuela"
+
 #: hello_world/templates/hello_world/index.html:3
-msgid "Hello World from a template. Welcome to my site."
-msgstr "Hola mundo desde un template. Bienvenido a mi sitio."
+msgid "Hello World"
+msgstr "Hola Mundo"
+
+#: hello_world/templates/hello_world/index.html:5
+msgid "Welcome to my site."
+msgstr "Bienvenidos a mi sitio."
+
+#: hello_world/templates/hello_world/index.html:21
+msgid "Go"
+msgstr "Ir"
+
+#: hello_world/templates/hello_world/index.html:24
+msgid "This is an awesome form."
+msgstr "Esta es una forma magnífica."
+
+#: hello_world/templates/hello_world/index.html:28
+msgid "Submit"
+msgstr "Enviar"
 
 #: mysite/settings.py:124
 msgid "Chinese"

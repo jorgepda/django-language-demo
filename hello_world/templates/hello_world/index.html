@@ -1,6 +1,8 @@
 {% load i18n %} 
 
-<h1>{% trans "Hello World from a template. Welcome to my site." %}</h1>
+<h1>{% trans "Hello World" %}</h1>
+
+<p>{% trans "Welcome to my site." %}</p>
 
 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
     <input name="next" type="hidden" value="{{ redirect_to }}" />
@@ -16,5 +18,12 @@
             {% endif %}
         {% endfor %}
     </select>
-    <input type="submit" value="Go" />
+    <input type="submit" value="{% trans 'Go' %}" />
+</form>
+
+<h3>{% trans "This is an awesome form." %}</h3>
+<form action="/your-form/" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="{% trans 'Submit' %}" />
 </form>

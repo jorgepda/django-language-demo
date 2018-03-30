@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-28 17:00-0400\n"
+"POT-Creation-Date: 2018-03-30 15:14-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,9 +17,61 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: hello_world/forms.py:5
+msgid "First name"
+msgstr "名字"
+
+#: hello_world/forms.py:6
+msgid "Last name"
+msgstr "姓"
+
+#: hello_world/forms.py:7
+msgid "Email address"
+msgstr "电子邮件地址"
+
+#: hello_world/forms.py:8
+msgid "School name"
+msgstr "学校名称"
+
+#: hello_world/forms.py:9
+msgid "School district"
+msgstr "学区"
+
+#: hello_world/forms.py:10
+msgid "Public School"
+msgstr "公立学校"
+
+#: hello_world/forms.py:10
+msgid "Private or Charter School"
+msgstr "私立学校"
+
+#: hello_world/forms.py:10
+msgid "Other"
+msgstr "其他"
+
+#: hello_world/forms.py:11
+msgid "School type"
+msgstr "学校类型"
+
 #: hello_world/templates/hello_world/index.html:3
-msgid "Hello World from a template. Welcome to my site."
-msgstr "你好, 世界从模板. 欢迎来到我的网站."
+msgid "Hello World"
+msgstr "你好, 世界从模"
+
+#: hello_world/templates/hello_world/index.html:5
+msgid "Welcome to my site."
+msgstr "欢迎来到我的网站."
+
+#: hello_world/templates/hello_world/index.html:21
+msgid "Go"
+msgstr "走"
+
+#: hello_world/templates/hello_world/index.html:24
+msgid "This is an awesome form."
+msgstr "这是一个很棒的形式."
+
+#: hello_world/templates/hello_world/index.html:28
+msgid "Submit"
+msgstr "提交"
 
 #: mysite/settings.py:124
 msgid "Chinese"
