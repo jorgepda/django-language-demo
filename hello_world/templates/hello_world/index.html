@@ -4,6 +4,14 @@
 
 <p>{% trans "Welcome to my site." %}</p>
 
+{% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+	{% endfor %}
+    </ul>
+{% endif %}
+
 <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
     <input name="next" type="hidden" value="{{ redirect_to }}" />
     <select name="language">
@@ -22,7 +30,7 @@
 </form>
 
 <h3>{% trans "This is an awesome form." %}</h3>
-<form action="/your-form/" method="post">
+<form action="." method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="{% trans 'Submit' %}" />

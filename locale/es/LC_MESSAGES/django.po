@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-30 15:13-0400\n"
+"POT-Creation-Date: 2018-04-03 10:53-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,17 +61,29 @@ msgstr "Hola Mundo"
 msgid "Welcome to my site."
 msgstr "Bienvenidos a mi sitio."
 
-#: hello_world/templates/hello_world/index.html:21
+#: hello_world/templates/hello_world/index.html:29
 msgid "Go"
 msgstr "Ir"
 
-#: hello_world/templates/hello_world/index.html:24
+#: hello_world/templates/hello_world/index.html:32
 msgid "This is an awesome form."
 msgstr "Esta es una forma magnífica."
 
-#: hello_world/templates/hello_world/index.html:28
+#: hello_world/templates/hello_world/index.html:36
 msgid "Submit"
 msgstr "Enviar"
+
+#: hello_world/views.py:16
+msgid "Your first name is too short"
+msgstr "Tu nombre es muy corto"
+
+#: hello_world/views.py:18
+msgid "Thank you for submitting your form"
+msgstr "Gracias por enviar tu forma"
+
+#: hello_world/views.py:21
+msgid "There was an error while submitting your form"
+msgstr "Hubo un error al procesar tu forma"
 
 #: mysite/settings.py:124
 msgid "Chinese"
