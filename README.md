@@ -93,6 +93,26 @@ To add a new translation, open the django.po file and add the corresponding tran
 msgid "Hello World"
 msgstr "你好, 世界从模"
 
+The next step is to compile the translation files by running django-admin compilemessages.
+
+
+## Language prefix in URL patterns
+So far, Django uses the user's browser preferences to set the display language. Django provides a tool that adds a language prefix in URLs in order to specify the language. 
+
+Begin by importing i18n_patterns to your site's urls.py
+from django.conf.urls.i18n import i18n_patterns
+
+Then add url(r'^i18n/', include('django.conf.urls.i18n')) to your urlpatterns.
+urlpatterns = 
+    url(r'^i18n/', include('django.conf.urls.i18n')),
+]
+
+Finally, use the i18n_patterns function to add your previous url patterns.
+urlpatterns += i18n_patterns(
+    url(r'^hello_world/', include('hello_world.urls')),
+    url(r'^admin/', admin.site.urls),
+)
+
 ## Toggling between translations
 
 
