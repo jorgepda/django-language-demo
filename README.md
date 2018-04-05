@@ -114,5 +114,7 @@ urlpatterns += i18n_patterns(
 )
 
 ## Toggling between translations
+Django comes with the set_language view that allows users to explicitly set a language preference. This is activated by including url(r'^i18n/', include('django.conf.urls.i18n')), in the URLconf, which was done in the previous step. The view is to be called with a POST method, the language being sent in the request.
 
+An example form is included in the template. 
 
