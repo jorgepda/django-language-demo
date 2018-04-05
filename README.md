@@ -43,13 +43,13 @@ In order to use Django's translation capabilities, it is necessary to have three
 1. Have `USE_I18N = True` 
 2. Include `django.middleware.locale.LocaleMiddleware` in `MIDDLEWARE`. Because of the way Django handles middlewares, `LocaleMiddleware` must be after `django.contrib.sessions.middleware.SessionMiddleware` and before `django.middleware.common.CommonMiddleware`. 
 3. Add
-```
+```python
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale/'),
 ]
 ```
 and the languages your application will support
-```
+```python
 LANGUAGES = [
     ('zh-hans', ('Chinese')),
     ('en'', ('English')),
@@ -61,11 +61,11 @@ A list of languages supported by Django and their respective codes can be found 
 ## Specifying translation strings
 ### Views
 To specify a string marked for translation, use the function `ugettext()`. For example, in `views.py` 
-```
+```python
 from django.utils.translation import ugettext as _
 ```
-Suppose we want to translate _Hello World_. We would simply have to wrap _Hello World_ in `\_()`. For example:
-```
+Suppose we want to translate _Hello World_. We would simply have to wrap _Hello World_ in `_()`. For example:
+```python
 from django.utils.translation import ugettext as _
 from django.http import HttpResponse
 
@@ -75,8 +75,8 @@ def my_view(request):
 ```
 This applies to any content within a view, including messages.
 ### Forms and models
-Forms and models use a similar logic but use `ugettext\_lazy()` instead. For example:
-```
+Forms and models use a similar logic but use `ugettext_lazy()` instead. For example:
+```python
 from django import forms
 from django.utils.translation import ugettext_lazy as _
 
@@ -93,7 +93,7 @@ To use translations in templates insert `{% load i18n %}` at the beginning of ea
 <p>{% trans "Welcome to my site." %}</p>
 ```
 ## Make translation files
-Once you have done the initial setup and marked strings for translation, create the translation message files by running `django-admin makemessages -l _ln_` for each language, where _ln_ is the locale name for the language. For example, to create the message file for Chinese (zh) run `django-admin makemessages -l zh`. This command creates a file with a `.po` extension in `locale/ln/LC\_MESSAGES/django.po`. 
+Once you have done the initial setup and marked strings for translation, create the translation message files by running `django-admin makemessages -l ln` for each language, where _ln_ is the locale name for the language. For example, to create the message file for Chinese (zh) run `django-admin makemessages -l zh`. This command creates a file with a `.po` extension in `locale/ln/LC\_MESSAGES/django.po`. 
 To add a new translation, open the `django.po` file and add the corresponding translation for each string. For example:
 ```
 msgid "Hello World"
@@ -104,8 +104,8 @@ The next step is to compile the translation files by running `django-admin compi
 ## Language prefix in URL patterns
 So far, Django uses the user's browser preferences to set the display language. Django provides a tool that adds a language prefix in URLs in order to specify the language. 
 
-Begin by importing `i18n\_patterns` to your site's `urls.py`
-```
+Begin by importing `i18n_patterns` to your site's `urls.py`
+```python
 from django.conf.urls.i18n import i18n_patterns
 
 Then add url(r'^i18n/', include('django.conf.urls.i18n')) to your urlpatterns.
@@ -113,15 +113,15 @@ urlpatterns =
     url(r'^i18n/', include('django.conf.urls.i18n')),
 ]
 ```
-Finally, use the `i18n\_patterns` function to add your previous url patterns.
-```
+Finally, use the `i18n_patterns` function to add your previous url patterns.
+```python
 urlpatterns += i18n_patterns(
     url(r'^hello_world/', include('hello_world.urls')),
     url(r'^admin/', admin.site.urls),
 )
 ```
 ## Toggling between translations
-Django comes with the `set\_language` view that allows users to explicitly set a language preference. This is activated by including `url(r'^i18n/', include('django.conf.urls.i18n'))`, in the URLconf, which was done in the previous step. The view is to be called with a POST method, the language being sent in the request.
+Django comes with the `set_language` view that allows users to explicitly set a language preference. This is activated by including `url(r'^i18n/', include('django.conf.urls.i18n'))`, in the URLconf, which was done in the previous step. The view is to be called with a POST method, the language being sent in the request.
 
 An example form is included in the template. 
 
