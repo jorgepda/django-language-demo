@@ -40,7 +40,7 @@ The app follows a typical Django app structure. There is one main difference, ho
 
 ## Requirements
 In order to use Django's translation capabilities, it is necessary to have three things set up in the `settings.py` file: 
-1. Have `USE\_I18N = True` 
+1. Have `USE_I18N = True` 
 2. Include `django.middleware.locale.LocaleMiddleware` in `MIDDLEWARE`. Because of the way Django handles middlewares, `LocaleMiddleware` must be after `django.contrib.sessions.middleware.SessionMiddleware` and before `django.middleware.common.CommonMiddleware`. 
 3. Add
 ```
